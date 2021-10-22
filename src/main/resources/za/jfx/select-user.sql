@@ -1,0 +1,1 @@
+Get-ADUser -Filter {SamAccountName -like "039*"} -Properties Name, SamAccountName, mail, Department, Title, info, Enabled | Select-Object Name, SamAccountName, mail, Department, Title, info, Enabled | Export-Csv -Delimiter ";" -Path "c:\develop\000-000.csv" -Encoding UTF8 -NoTypeInformation

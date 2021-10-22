@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.EmployeeFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <Label style="-fx-padding: 4;" text="Детальная информация" textFill="#0f3342"
+                       BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </top>
+            <center>
+                <BorderPane BorderPane.alignment="CENTER">
+                    <top>
+                        <VBox prefHeight="117.0" prefWidth="400.0">
+                            <children>
+                                <AnchorPane prefHeight="0.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets left="4.0" right="4.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label text="ФИО" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.topAnchor="0.0">
+                                            <padding>
+                                                <Insets left="2.0" right="2.0"/>
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="fioField" editable="false" layoutY="8.0" prefHeight="30.0"
+                                                   prefWidth="285.0" AnchorPane.bottomAnchor="6.0"
+                                                   AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0"/>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="0.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets left="4.0" right="4.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label text="Должность" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.topAnchor="0.0">
+                                            <padding>
+                                                <Insets left="2.0" right="2.0"/>
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="positionField" editable="false" layoutY="8.0" prefHeight="30.0"
+                                                   prefWidth="285.0" AnchorPane.bottomAnchor="6.0"
+                                                   AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0"/>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="0.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets left="4.0" right="4.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label text="Телефон" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.topAnchor="0.0">
+                                            <padding>
+                                                <Insets left="2.0" right="2.0"/>
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="phoneField" editable="false" layoutY="8.0" prefHeight="30.0"
+                                                   prefWidth="285.0" AnchorPane.bottomAnchor="6.0"
+                                                   AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0"/>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="0.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets left="4.0" right="4.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label text="Телефон ВТС" AnchorPane.bottomAnchor="0.0"
+                                               AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <padding>
+                                                <Insets left="2.0" right="2.0"/>
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="phoneKspdField" editable="false" layoutY="8.0"
+                                                   prefHeight="30.0" prefWidth="285.0" AnchorPane.bottomAnchor="6.0"
+                                                   AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0"/>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </top>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="0.0" prefWidth="400.0"
+                                               text="Рабочая станция">
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                            </padding>
+                                        </Label>
+                                        <AnchorPane prefHeight="0.0" prefWidth="200.0">
+                                            <children>
+                                                <FlowPane layoutX="12.0" prefHeight="26.0" prefWidth="350.0"
+                                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0"
+                                                          AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <Label text="ip-адрес">
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                                            </padding>
+                                                        </Label>
+                                                        <TextField fx:id="ipField" prefHeight="26.0" prefWidth="270.0">
+                                                            <FlowPane.margin>
+                                                                <Insets left="2.0"/>
+                                                            </FlowPane.margin>
+                                                        </TextField>
+                                                    </children>
+                                                </FlowPane>
+                                                <Button fx:id="btPing" mnemonicParsing="false" onAction="#onPing"
+                                                        style="-fx-padding: 2 4;" text="Ping"
+                                                        AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                        AnchorPane.topAnchor="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets right="8.0"/>
+                                            </padding>
+                                        </AnchorPane>
+                                        <Label alignment="CENTER" prefWidth="400.0" text="Управление">
+                                            <VBox.margin>
+                                                <Insets top="4.0"/>
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="12.0"/>
+                                            </font>
+                                        </Label>
+                                        <AnchorPane prefHeight="0.0" prefWidth="200.0">
+                                            <children>
+                                                <FlowPane prefHeight="0.0" prefWidth="400.0">
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                                    </padding>
+                                                    <children>
+                                                        <Button fx:id="btUvnc" mnemonicParsing="false"
+                                                                onAction="#onUvnc" style="-fx-padding: 2 6;"
+                                                                text="UVNC">
+                                                            <FlowPane.margin>
+                                                                <Insets right="4.0"/>
+                                                            </FlowPane.margin>
+                                                        </Button>
+                                                        <Button fx:id="btRdp" mnemonicParsing="false"
+                                                                onAction="#onRdp"
+                                                                style="-fx-padding: 2 6;" text="RDP">
+                                                            <FlowPane.margin>
+                                                                <Insets right="4.0"/>
+                                                            </FlowPane.margin>
+                                                        </Button>
+                                                        <Button fx:id="btMgmt" mnemonicParsing="false"
+                                                                onAction="#onMgmt"
+                                                                style="-fx-padding: 2 6;" text="Mgmt">
+                                                            <FlowPane.margin>
+                                                                <Insets right="4.0"/>
+                                                            </FlowPane.margin>
+                                                        </Button>
+                                                        <Button fx:id="btExplorer" mnemonicParsing="false"
+                                                                onAction="#OnExplorer"
+                                                                style="-fx-padding: 2 6;" text="Open share">
+                                                            <FlowPane.margin>
+                                                                <Insets right="4.0"/>
+                                                            </FlowPane.margin>
+                                                        </Button>
+                                                    </children>
+                                                </FlowPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

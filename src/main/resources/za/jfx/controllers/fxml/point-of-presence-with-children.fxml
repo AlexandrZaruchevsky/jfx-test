@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.PointOfPresenceWithChildrenFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </padding>
+                    <children>
+                        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="400.0" prefWidth="400.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="28.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="28.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Наименование" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <padding>
+                                        <Insets left="4.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="name" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label text="Адрес" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <padding>
+                                        <Insets left="4.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="address" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <TabPane fx:id="tpTabs" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab fx:id="tabEmployees" text="Employees">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <top>
+                                                <ToolBar prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                    <items>
+                                                        <Separator orientation="VERTICAL" prefHeight="0.0" />
+                                                        <Button fx:id="btAddButton" mnemonicParsing="false" onAction="#onViewEmployees" text="add">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="btDeleteButton" mnemonicParsing="false" onAction="#onDeleteEmployee" text="delete">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                    </items>
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                    </padding>
+                                                </ToolBar>
+                                            </top>
+                                            <center>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+                                                    <children>
+                                                        <ListView fx:id="lvEmployees" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </center>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabWorkstations" text="Workstations">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <top>
+                                                <ToolBar prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                    <items>
+                                                        <Separator orientation="VERTICAL" prefHeight="0.0" />
+                                                        <Button fx:id="btAddWorkstation" mnemonicParsing="false" onAction="#onViewAddWorkstation" text="add">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="btEditWorkstation" mnemonicParsing="false" onAction="#onViewEditWorkstation" text="edit">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="btDeleteWorkStation" mnemonicParsing="false" onAction="#onDeleteWorkstation" text="delete">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Separator orientation="VERTICAL" prefHeight="0.0" />
+                                                        <Button fx:id="btSelectWorkStation" mnemonicParsing="false" onAction="#onViewWorkstations" text="delete">
+                                                            <padding>
+                                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                            </padding>
+                                                        </Button>
+                                                    </items>
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                    </padding>
+                                                </ToolBar>
+
+                                            </top>
+                                            <center>
+                                                <TableView fx:id="tvWorkstations" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                    <columns>
+                                                        <TableColumn fx:id="hostName" prefWidth="150.0" text="host-name" />
+                                                        <TableColumn fx:id="ipAddress" prefWidth="150.0" text="ip-address" />
+                                                        <TableColumn fx:id="hostFullName" prefWidth="150.0" text="host-full-name" />
+                                                    </columns>
+                                                    <BorderPane.margin>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                                    </BorderPane.margin>
+                                                </TableView>
+                                            </center>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                    <BorderPane.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </BorderPane.margin>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

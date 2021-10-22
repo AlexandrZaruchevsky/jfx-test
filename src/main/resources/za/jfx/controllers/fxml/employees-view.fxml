@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.EmployeesViewFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <BorderPane BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets top="2.0"/>
+                    </BorderPane.margin>
+                    <top>
+                        <Label prefHeight="0.0" text="Employees" BorderPane.alignment="CENTER">
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                            </padding>
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                    </top>
+                    <center>
+                        <AnchorPane prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <TextField fx:id="searchField" prefWidth="300.0" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                            <padding>
+                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                            </padding>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </top>
+            <center>
+                <ListView fx:id="lvEmployees" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                    </BorderPane.margin>
+                </ListView>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

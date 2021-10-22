@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="0.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.WorkstationEditFxController">
+    <children>
+        <BorderPane prefHeight="0.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <GridPane style="-fx-border-color: gray;" vgap="4.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="300.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="hostName" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <TextField fx:id="fieldHostName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        <Label text="hostFullName" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <TextField fx:id="fieldHostFullName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="ipAddress" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <TextField fx:id="fieldIpAddress" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label text="description" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <TextArea fx:id="areaDescription" maxHeight="800" prefHeight="0.0" GridPane.columnIndex="1"
+                                  GridPane.rowIndex="3"/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                    </padding>
+                </GridPane>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets top="4.0"/>
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                    </padding>
+                    <children>
+                        <Button fx:id="btSave" onAction="#onSaveWorkStation" mnemonicParsing="false" text="save"
+                                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        <Button fx:id="btCancel" onAction="#onClose" mnemonicParsing="false" text="Cancel"
+                                AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

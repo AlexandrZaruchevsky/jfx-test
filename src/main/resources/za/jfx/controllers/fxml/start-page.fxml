@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.StartPageFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <SplitPane dividerPositions="0.560200668896321" prefHeight="160.0" prefWidth="200.0"
+                           BorderPane.alignment="CENTER">
+                    <items>
+                        <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="398.0"
+                                    prefWidth="300.0">
+                            <children>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <ToolBar prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <padding>
+                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                            </padding>
+                                            <BorderPane.margin>
+                                                <Insets/>
+                                            </BorderPane.margin>
+                                            <items>
+                                                <Separator orientation="VERTICAL" prefHeight="0.0"/>
+                                                <TextField fx:id="searchTextField"/>
+                                                <Separator orientation="VERTICAL" prefHeight="0.0"/>
+                                                <Button fx:id="btAddEmployee" onAction="#onEmployeeAdd"
+                                                        mnemonicParsing="false" text="add">
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="btEditEmployee" onAction="#onEmployeeEdit"
+                                                        mnemonicParsing="false" text="edit">
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="btDeleteEmployee" onAction="#onEmployeeDelete"
+                                                        mnemonicParsing="false" text="delete">
+                                                    <padding>
+                                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                                    </padding>
+                                                </Button>
+                                            </items>
+                                        </ToolBar>
+                                    </top>
+                                    <center>
+                                        <ListView fx:id="employeesListView" prefHeight="200.0" prefWidth="200.0"
+                                                  BorderPane.alignment="CENTER">
+                                            <BorderPane.margin>
+                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                            </BorderPane.margin>
+                                        </ListView>
+                                    </center>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <Label text="Детальная информация" textFill="#275f86"
+                                               BorderPane.alignment="CENTER">
+                                            <BorderPane.margin>
+                                                <Insets bottom="8.0" left="4.0" right="4.0" top="4.0"/>
+                                            </BorderPane.margin>
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                    </top>
+                                    <center>
+                                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <top>
+                                                <GridPane vgap="1.0" BorderPane.alignment="CENTER">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.00"
+                                                                           minWidth="100.0" prefWidth="100.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1980"
+                                                                           minWidth="100.0" prefWidth="100.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" prefHeight="28.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label text="Ф.И.О." GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="0"/>
+                                                        <TextField fx:id="fioField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="0"/>
+                                                        <Label text="Отдел" GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="1"/>
+                                                        <TextField fx:id="departmentField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="1"/>
+                                                        <Label text="Должность" GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="2"/>
+                                                        <TextField fx:id="positionField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="2"/>
+                                                        <Label text="Телефон" GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="3"/>
+                                                        <TextField fx:id="phoneField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="3"/>
+                                                        <Label text="Телефон ВТС" GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="4"/>
+                                                        <TextField fx:id="phoneKspdField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="4"/>
+                                                        <Label text="email" GridPane.columnIndex="0"
+                                                               GridPane.rowIndex="5"/>
+                                                        <TextField fx:id="emailField" GridPane.columnIndex="1"
+                                                                   GridPane.rowIndex="5"/>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="4.0" right="4.0"/>
+                                                    </padding>
+                                                    <BorderPane.margin>
+                                                        <Insets bottom="4.0"/>
+                                                    </BorderPane.margin>
+                                                </GridPane>
+                                            </top>
+                                            <center>
+                                                <Accordion BorderPane.alignment="CENTER">
+                                                    <panes>
+                                                        <TitledPane fx:id="equipmentPane" animated="false"
+                                                                    text="Оборудование">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0"
+                                                                            prefHeight="180.0" prefWidth="200.0"/>
+                                                            </content>
+                                                        </TitledPane>
+                                                        <TitledPane fx:id="pointOfPresencePane" animated="false"
+                                                                    text="Точка присутствия">
+                                                            <content>
+                                                                <AnchorPane fx:id="pointOfPresenceAnchorPane"
+                                                                            minHeight="0.0" minWidth="0.0"
+                                                                            prefHeight="180.0" prefWidth="200.0"/>
+                                                            </content>
+                                                        </TitledPane>
+                                                    </panes>
+                                                </Accordion>
+                                            </center>
+                                        </BorderPane>
+                                    </center>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </center>
+        </BorderPane>
+    </children>
+    <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </padding>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.EquipmentsByEmployeeFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <top>
+                        <ToolBar prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <items>
+                                <Separator orientation="VERTICAL" prefHeight="0.0"/>
+                                <Button fx:id="btAddWorkstation" mnemonicParsing="false"
+                                        onAction="#onViewAddWorkstation" text="add">
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btEditWorkstation" mnemonicParsing="false"
+                                        onAction="#onViewEditWorkstation" text="edit">
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btDeleteWorkStation" mnemonicParsing="false"
+                                        onAction="#onDeleteWorkstation" text="delete">
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btSelectWorkStation" mnemonicParsing="false"
+                                        onAction="#onViewWorkstations" text="select">
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Separator orientation="VERTICAL" prefHeight="0.0"/>
+                                <Button fx:id="btPing" onAction="#onPing" mnemonicParsing="false" text="Ping">
+                                    <tooltip>
+                                        <Tooltip text="Ping" />
+                                    </tooltip>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btUvnc" onAction="#onUvnc" mnemonicParsing="false" text="Uvnc">
+                                    <tooltip>
+                                        <Tooltip text="UVNC - соединение" />
+                                    </tooltip>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btRdp" onAction="#onRdp" mnemonicParsing="false" text="Rdp">
+                                    <tooltip>
+                                        <Tooltip text="RDP - соединение" />
+                                    </tooltip>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btMgmt" onAction="#onMgmt" mnemonicParsing="false" text="Mgmt">
+                                    <tooltip>
+                                        <Tooltip text="Удаленное управление" />
+                                    </tooltip>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                                <Button fx:id="btShare" onAction="#onExplorerShare" mnemonicParsing="false" text="Share">
+                                    <tooltip>
+                                        <Tooltip text="Share c$" />
+                                    </tooltip>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                                    </padding>
+                                </Button>
+                            </items>
+                            <padding>
+                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                            </padding>
+                        </ToolBar>
+                    </top>
+                    <BorderPane.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+                    </BorderPane.margin>
+                    <center>
+                        <TableView fx:id="tvEquipments" prefHeight="200.0" prefWidth="200.0"
+                                   BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="columnHostName" prefWidth="100.0" text="hostName"/>
+                                <TableColumn fx:id="columnHostFullName" prefWidth="200.0" text="hostFullName"/>
+                                <TableColumn fx:id="columnIpAddress" prefWidth="100.0" text="ipAddress"/>
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

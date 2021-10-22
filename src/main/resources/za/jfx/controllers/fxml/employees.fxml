@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.EmployeesFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="0.0" prefWidth="200.0" style="-fx-padding: 4;" BorderPane.alignment="CENTER">
+                    <children>
+                        <FlowPane prefHeight="0.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Separator orientation="VERTICAL" prefHeight="0.0" />
+                                <TextField fx:id="searchField" prefWidth="200.0" promptText="Search text" style="-fx-padding: 4 6;" />
+                                <Separator orientation="VERTICAL" prefHeight="0.0">
+                                    <FlowPane.margin>
+                                        <Insets left="4.0" />
+                                    </FlowPane.margin>
+                                </Separator>
+                                <Button fx:id="addButton" onAction="#onEmployeeAdd" text="add">
+                                    <FlowPane.margin>
+                                        <Insets right="4.0" />
+                                    </FlowPane.margin>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                    </padding>
+                                </Button>
+                                <Button fx:id="editButton" onAction="#onEmployeeEdit" text="edit">
+                                    <FlowPane.margin>
+                                        <Insets right="4.0" />
+                                    </FlowPane.margin>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                    </padding>
+                                </Button>
+                                <Button fx:id="deleteButton" onAction="#onEmployeeDelete" text="delete">
+                                    <FlowPane.margin>
+                                        <Insets right="4.0" />
+                                    </FlowPane.margin>
+                                    <padding>
+                                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                        </FlowPane>
+                        <FlowPane prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button onAction="#fillEquipment" mnemonicParsing="false" text="fillEquipment" />
+                     </children></FlowPane>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <BorderPane fx:id="pEmployees" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <center>
+                        <AnchorPane style="-fx-padding: 4;" BorderPane.alignment="CENTER">
+                            <children>
+                                <TableView fx:id="tvEmployees" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="lastName" prefWidth="120.0" text="Фамилия" />
+                                        <TableColumn fx:id="firstName" prefWidth="120.0" text="Имя" />
+                                        <TableColumn fx:id="middleName" prefWidth="120.0" text="Отчество" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

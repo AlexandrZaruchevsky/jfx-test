@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="600.0" style="-fx-border-color: gray;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.OutputLogFxController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <children>
+                        <Button fx:id="btClose" mnemonicParsing="false" onAction="#onClose" text="close" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import za.jfx.controllers.components.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.jfx.controllers.UsersFromAdFxController">
+    <children>
+        <SplitPane dividerPositions="0.5879396984924623" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <SplitPane dividerPositions="0.5016722408026756" prefHeight="160.0" prefWidth="200.0"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                    AnchorPane.topAnchor="0.0">
+                                            <center>
+                                                <ListViewFxZa fx:id="userFromAdListView" prefHeight="200.0"
+                                                              prefWidth="200.0" BorderPane.alignment="CENTER"/>
+                                            </center>
+                                            <top>
+                                                <Label text="From Ad" BorderPane.alignment="CENTER"/>
+                                            </top>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                    AnchorPane.topAnchor="0.0">
+                                            <center>
+                                                <ListViewFxZa fx:id="employeeDtoListView" prefHeight="200.0"
+                                                              prefWidth="200.0" BorderPane.alignment="CENTER"/>
+                                            </center>
+                                            <top>
+                                                <ToolBar prefHeight="0.0" prefWidth="200.0" style="-fx-padding: 2;"
+                                                         BorderPane.alignment="CENTER">
+                                                    <items>
+                                                        <TextField fx:id="searchField" onAction="#searchEmployeeDto"/>
+                                                    </items>
+                                                </ToolBar>
+                                            </top>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <top>
+                                <ToolBar prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <items>
+                                        <Button fx:id="btAddUserEmployee" mnemonicParsing="false"
+                                                onAction="#addUserEmployee" text="Add"/>
+                                        <Button mnemonicParsing="false" onAction="#deleteUserEmployee" text="Delete"/>
+                                        <Button mnemonicParsing="false" onAction="#updateEmployeeEquipment"
+                                                text="Update"/>
+                                        <Button onAction="#updateEmployeeFromUserAdV1" mnemonicParsing="false" text="UpLoad"/>
+                                    </items>
+                                </ToolBar>
+                            </top>
+                            <center>
+                                <ListViewFxZa fx:id="userEmployeeListView" prefHeight="200.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER"/>
+                            </center>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
